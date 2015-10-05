@@ -16,3 +16,8 @@ ruby GoT_noble_houses.rb Lannister
 ```
 python execute_GoT_script.py
 ```
+#### 3. Display text in canvas
+- Displays text entered in prompt control in HTML5.0 canvas element. Defaults to 'Cerner Corp.'
+- Language: HTML & Javascript
+- Execution: Double click the file 'canvas_text_display.html' to open in default browser.
+NOTE: canvas element not supported by IE 8

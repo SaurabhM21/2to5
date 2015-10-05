@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'/>
+    <!-- Not a good practice to include js methods inline with html -->
+    <script type='text/javascript'>
+      function get_text() {
+        var input_txt = prompt('Enter text to display', 'Cerner Corp.');
+        input_txt = input_txt || 'Cerner Corp.';
+        display_data(input_txt);
+      }
+      function display_data(input_txt) {
+        var canvas = document.getElementById('canvas');
+        if (canvas.getContext) {
+          var ctx = canvas.getContext('2d');
+
+          ctx.font = '20px arial';
+          ctx.fillText(input_txt, 10, 20);
+        }
+      }
+    </script>
+  </head>
+  <!-- Not a good practice to call js methods like this -->
+  <body onload='get_text();'>
+    <canvas id='canvas' width='300' height='300'>Your browser does not support the canvas element</canvas>
+  </body>
+</html>
