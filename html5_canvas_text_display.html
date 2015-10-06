@@ -1,3 +1,5 @@
+<!-- Reference: http://www.w3schools.com/tags/canvas_font.asp -->
+<!-- Double click the html file to execute the js. The prompt defaults to 'First Hand Foundation' -->
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,8 +7,8 @@
     <!-- Not a good practice to include js methods inline with html -->
     <script type='text/javascript'>
       function get_text() {
-        var input_txt = prompt('Enter text to display', 'Cerner Corp.');
-        input_txt = input_txt || 'Cerner Corp.';
+        var input_txt = prompt('Enter text to display', 'First Hand Foundation');
+        input_txt = input_txt || 'First Hand Foundation';
         display_data(input_txt);
       }
       function display_data(input_txt) {
@@ -14,14 +16,16 @@
         if (canvas.getContext) {
           var ctx = canvas.getContext('2d');
 
-          ctx.font = '20px arial';
-          ctx.fillText(input_txt, 10, 20);
+          ctx.font = '20px serif';
+          ctx.fillText(input_txt, 10, 30);
         }
       }
     </script>
   </head>
   <!-- Not a good practice to call js methods like this -->
   <body onload='get_text();'>
-    <canvas id='canvas' width='300' height='300'>Your browser does not support the canvas element</canvas>
+    <canvas id='canvas' width='300' height='300'>
+      Your browser does not support the canvas element
+    </canvas>
   </body>
 </html>
